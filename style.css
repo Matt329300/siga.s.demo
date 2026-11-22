@@ -711,3 +711,11 @@ em { font-style: italic; }
   .vp--5 { top: .75rem; left: 41%;      transform: rotate(-3deg); width: clamp(9rem, 11vw, 11.5rem); }
   .visit__grid { grid-template-columns: minmax(0, 31rem) minmax(0, 1fr); gap: 4.5rem; align-items: start; }
 }
+
+/* Hero: sama nazwa */
+.hero__title--name { font-size: clamp(4rem, 17vw, 11rem); line-height: .9; max-width: none; letter-spacing: -.01em; }
+.hero__title--name em { font-style: italic; }
+
+/* Hero: nazwa w Young Serif (wybrana z 5 propozycji) */
+.hero__title--name { font-size: clamp(3.4rem, 14vw, 9rem); line-height: 1; letter-spacing: -.02em; }
+.hero__title--name em { font-family: "Young Serif", Georgia, serif; font-style: normal; font-weight: 400; }
