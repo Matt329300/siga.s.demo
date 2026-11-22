@@ -719,3 +719,21 @@ em { font-style: italic; }
 /* Hero: nazwa w Young Serif (wybrana z 5 propozycji) */
 .hero__title--name { font-size: clamp(3.4rem, 14vw, 9rem); line-height: 1; letter-spacing: -.02em; }
 .hero__title--name em { font-family: "Young Serif", Georgia, serif; font-style: normal; font-weight: 400; }
+
+
+/* ---------- Nagłówki jak na kartce „Siga Siga”: Instrument Serif, kursywa, zwykłe litery ---------- */
+.display, .carte__title, .ticket__title, .site-footer__name {
+  text-transform: none; font-style: italic; letter-spacing: 0;
+}
+.display { line-height: 1.02; }
+.rule h3, .polaroid h3, .contact__info dd { font-style: italic; }
+.hero__lead { font: italic clamp(1.25rem, 2.6vw, 1.6rem)/1.35 var(--serif); max-width: 36rem; text-wrap: balance; }
+
+/* Przyciski jak owal „Zarezerwuj” w nagłówku: kursywa Instrument Serif, owalny kształt, lekki przechył */
+.btn {
+  min-height: 56px; padding: .85rem 2.2rem;
+  border: 1.5px solid var(--terra); border-radius: 50% / 50%;
+  font: italic 1.45rem/1 var(--serif); font-weight: 400; letter-spacing: .01em;
+  transform: rotate(-2deg);
+}
+.btn:hover { border-color: var(--terra-dark); }
