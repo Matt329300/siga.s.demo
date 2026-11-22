@@ -1,0 +1,20 @@
+# Ustawienia lokalne Claude Code / edytorów
+.claude/
+.vscode/
+.idea/
+*.code-workspace
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Zależności, logi, pliki tymczasowe
+node_modules/
+*.log
+*.tmp
+_*.html
+
+# Sekrety (na przyszłość)
+.env
+.env.*

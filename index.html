@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Siga Siga – bistro bliskowschodnie na Mokotowie | Willowa 9, Warszawa</title>
+  <meta name="description" content="Siga Siga to małe bistro z kuchnią bliskowschodnią na warszawskim Mokotowie (ul. Willowa 9). Małe talerze do dzielenia, raczej wege, ale nie tylko. Bez pośpiechu, na spokojnie.">
+  <meta name="theme-color" content="#F1E6D6">
+  <!-- TODO: wpisać docelowy adres domeny w canonical, og:url i og:image (Open Graph wymaga pełnego URL) -->
+  <link rel="canonical" href="https://example.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:site_name" content="Siga Siga">
+  <meta property="og:title" content="Siga Siga – bistro bliskowschodnie na Mokotowie">
+  <meta property="og:description" content="Małe talerze do dzielenia, raczej wege, ale nie tylko. Bez pośpiechu, na spokojnie. Willowa 9, Warszawa.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/img/hummus-jaffa.jpg">
+  <meta property="og:image:alt" content="Hummus jaffa z karmelizowaną cebulą i salsą pietruszkową">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Dane strukturalne – tylko potwierdzone dane. -->
+  <!-- TODO: dodać "url" i "image" z pełną domeną; ew. "priceRange" -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Siga Siga",
+    "description": "Małe bistro z kuchnią bliskowschodnią na Mokotowie. Małe talerze do dzielenia, raczej wege, ale nie tylko.",
+    "servesCuisine": ["Kuchnia bliskowschodnia", "Middle Eastern"],
+    "telephone": "+48 537 880 780",
+    "email": "sigasigabistro@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Willowa 9",
+      "postalCode": "00-790",
+      "addressLocality": "Warszawa",
+      "addressRegion": "mazowieckie",
+      "addressCountry": "PL"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "13:00", "closes": "21:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "13:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:00", "closes": "20:00" }
+    ],
+    "acceptsReservations": true,
+    "sameAs": ["https://www.facebook.com/sigasigabistro/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <div class="checker" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <button class="pill nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="logo" href="#top">Siga Siga</a>
+    <a class="pill pill--solid" href="tel:+48537880780">Zarezerwuj</a>
+
+    <nav id="nav" class="nav-card" aria-label="Główna nawigacja" hidden>
+      <ul>
+        <li><a href="#menu">Jedzenie <span aria-hidden="true">→</span></a></li>
+        <li><a href="#karta" data-set-lang="pl">Cała karta i wina <span aria-hidden="true">→</span></a></li>
+        <li><a href="#menu" data-set-lang="en" lang="en">Menu in English <span aria-hidden="true">→</span></a></li>
+        <li><a href="#jak-u-nas">Jak u nas jest <span aria-hidden="true">→</span></a></li>
+        <li><a href="#opinie">Opinie <span aria-hidden="true">→</span></a></li>
+        <li><a href="#godziny">Godziny <span aria-hidden="true">→</span></a></li>
+        <li><a href="#kontakt">Kontakt <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <!-- Zdjęcie: Google Maps, autorka Karolina Ferfet (zdjęcie gościa) – patrz img/ZRODLA.md -->
+      <img class="hero__bg" src="img/wnetrze-cegla.jpg" alt="" width="1050" height="1400" fetchpriority="high">
+      <p class="eyebrow">Bistro bliskowschodnie · Mokotów, ul. Willowa 9</p>
+      <h1 id="hero-title" class="hero__title">
+        Bez pośpiechu,<br>
+        <span class="dotline">na spokojnie.</span><br>
+        <em>Siga siga.</em>
+      </h1>
+      <p class="hero__lead">„Siga siga” znaczy „powoli”. Małe talerze na środek stołu, do dzielenia się z&nbsp;bliskimi.</p>
+      <!-- TODO: potwierdzić sposób rezerwacji (telefon? e-mail? system online?) -->
+      <a class="btn" href="tel:+48537880780">Zarezerwuj stolik</a>
+    </section>
+
+    <!-- Pasek haseł -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>małe talerze</span><span>raczej wege</span><span>ale nie tylko</span><span>hummus jaffa</span><span>labneh</span><span>kalafior</span><span>papierowe obrusy</span><span>na spokojnie</span><span>Mokotów</span><span>Willowa 9</span>
+        <span>małe talerze</span><span>raczej wege</span><span>ale nie tylko</span><span>hummus jaffa</span><span>labneh</span><span>kalafior</span><span>papierowe obrusy</span><span>na spokojnie</span><span>Mokotów</span><span>Willowa 9</span>
+      </div>
+    </div>
+
+    <!-- Duże zdjęcie + przechylona karta -->
+    <section class="feature" aria-label="Siga Siga w skrócie">
+      <!-- Zdjęcie: pianino w lokalu – dostarczone przez użytkownika, patrz img/ZRODLA.md -->
+      <img class="feature__photo" src="img/pianino.webp" alt="Czarne pianino przy ceglanej ścianie w Siga Siga, na nim plakat, książki i dziecięce rysunki" width="1088" height="1445" loading="lazy">
+      <div class="paper-card feature__card">
+        <p class="paper-card__kicker">Siga Siga</p>
+        <ul class="card-list">
+          <li><span>Kuchnia bliskowschodnia</span></li>
+          <li><span>Małe talerze do dzielenia</span></li>
+          <li><span>Raczej wege, ale nie tylko</span></li>
+          <li><a href="#godziny">Śr – ndz od 13:00 <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. MENU -->
+    <section class="band band--navy" id="menu" aria-labelledby="menu-title">
+      <!-- Tło: ciepłe zdjęcie sali z lampami z plecionki – dostarczone przez użytkownika (patrz img/ZRODLA.md). Stoi w miejscu, karta przewija się nad nim. -->
+      <div class="band__bg" aria-hidden="true"><img src="img/tlo-menu.webp" alt="" width="1086" height="1448" loading="lazy" decoding="async"></div>
+      <div class="band__head">
+        <h2 id="menu-title" class="display">
+          <span class="dotline">Raczej wege,</span><br>ale nie tylko
+          <span class="sticker sticker--oval" aria-hidden="true">mezze</span>
+        </h2>
+        <div class="lang-switch" role="group" aria-label="Język menu / Menu language">
+          <button type="button" class="lang-switch__btn" data-set-lang="pl" aria-pressed="true" lang="pl" title="Menu po polsku">PL</button>
+          <button type="button" class="lang-switch__btn" data-set-lang="en" aria-pressed="false" lang="en" title="Menu in English">EN</button>
+        </div>
+        <div class="menu-lang" data-lang="pl">
+          <p class="band__intro">Mezze, przystawki i dipy na małych talerzykach, na środek stołu, do dzielenia się.</p>
+          <ul class="legend" aria-label="Oznaczenia w menu">
+            <li><span class="tag tag--veg">wege</span> wegetariańskie</li>
+          </ul>
+        </div>
+        <div class="menu-lang" data-lang="en" lang="en" hidden>
+          <p class="band__intro">Mezze, appetizers and dips on small plates – perfect for sharing with loved ones and trying new flavors.</p>
+          <ul class="legend" aria-label="Menu labels">
+            <li><span class="tag tag--veg">veggie</span> vegetarian</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-lang" data-lang="pl">
+        <!-- Źródło całego menu: wyróżniona relacja „menu” na Instagramie @sigasigawarsaw,
+             „menu jesień–zima 2026/2027” i „alko menu jesień–zima 2026/2027” (dodane ok. 7 tyg. przed 22.11.2026).
+             Nazwy, składy, gramatury i ceny przepisane z karty. Przy zmianie karty zaktualizuj tę sekcję.
+             Oznaczenia wege/wegańskie wyprowadzone ze składu – karta ich nie podaje.
+             TODO: potwierdzić z kuchnią oznaczenia; dania z salsą pietruszkową mają oznaczenie DO UZUPEŁNIENIA. -->
+        <ol class="polaroids">
+          <li class="polaroid">
+            <img src="img/labneh-z-winogronami.jpg" alt="Labneh z pieczonymi ciemnymi winogronami na porcelanowym talerzu" width="1200" height="675" loading="lazy">
+            <h3>Labneh z winogronami</h3>
+            <p>Ser labneh własnej roboty, pieczone winogrona. 150 g</p>
+            <p class="polaroid__meta"><span class="tag tag--veg">wege</span><span class="price">28 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/hummus-jaffa.jpg" alt="Hummus jaffa z karmelizowaną cebulą i salsą pietruszkową" width="1200" height="675" loading="lazy">
+            <h3>Hummus jaffa</h3>
+            <p>Ciecierzyca, tahini, cytryna, oliwa, karmelizowana cebula, salsa pietruszkowa, sumak. 300 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">wege? [DO UZUPEŁNIENIA]</span><span class="price">31 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/palony-baklazan.jpg" alt="Palony bakłażan polany oliwą, posypany pietruszką i sumakiem" width="1200" height="675" loading="lazy">
+            <h3>Palony bakłażan</h3>
+            <p>Bakłażan, oliwa z Krety, salsa pietruszkowa, sumak, maldon. 200 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">wege? [DO UZUPEŁNIENIA]</span><span class="price">30 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/kalafior.jpg" alt="Pieczony kalafior z zieloną salsą pietruszkową" width="1200" height="675" loading="lazy">
+            <h3>Kalafior</h3>
+            <p>Pieczony kalafior, salsa pietruszkowa, maldon. 700 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">wege? [DO UZUPEŁNIENIA]</span><span class="price">45 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/marchewki-rozana-harissa.jpg" alt="Pieczona marchewka z różaną harissą, granatem i kolendrą" width="1200" height="675" loading="lazy">
+            <span class="sticker sticker--scallop" aria-hidden="true">różana<br>harissa</span>
+            <h3>Marchewka z różaną harissą</h3>
+            <p>Pieczona marchewka, różana harissa, pietruszka, granat, miód, świeża kolendra, cytryna, maldon. 170 g</p>
+            <p class="polaroid__meta"><span class="tag tag--veg">wege</span><span class="price">32 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/kurczak-kiszona-cytryna.jpg" alt="Plastry kurczaka z kiszoną cytryną, tahini i salsą pietruszkową" width="1200" height="675" loading="lazy">
+            <h3>Kurczak z kiszoną cytryną</h3>
+            <p>Pierś z kurczaka, kiszona cytryna, tymianek, tahini, salsa pietruszkowa, oliwa z Krety. 180 g</p>
+            <p class="polaroid__meta"><span class="price">38 zł</span></p>
+          </li>
+        </ol>
+
+        <!-- Cała karta -->
+        <div class="carte" id="karta">
+          <div class="checker checker--small" aria-hidden="true"></div>
+          <h3 class="carte__title">Cała karta <em>jesień – zima 2026/27</em></h3>
+          <p class="carte__lead">Autorska kuchnia inspirowana smakami bliskowschodnimi i śródziemnomorskimi, w formie mezze, przystawek, dipów oraz puszystej pity. Ceny w zł.</p>
+
+          <div class="carte__cols">
+            <section class="carte__group" aria-labelledby="k-mezze">
+              <h4 id="k-mezze">Mezze / przystawki</h4>
+              <ul class="carte__list">
+                <li><span class="carte__name">Kalafior</span><span class="carte__price">45</span><span class="carte__desc">pieczony kalafior, salsa pietruszkowa, maldon · 700 g</span></li>
+                <li><span class="carte__name">Por</span><span class="carte__price">29</span><span class="carte__desc">por, parmezan, oliwa z Krety, maldon · 150 g</span></li>
+                <li><span class="carte__name">Papryczki padrón</span><span class="carte__price">21</span><span class="carte__desc">papryczki padrón, maldon · 100 g</span></li>
+                <li><span class="carte__name">Hummus jaffa</span><span class="carte__price">31</span><span class="carte__desc">ciecierzyca, tahini, cytryna, oliwa, karmelizowana cebula, salsa pietruszkowa, sumak · 300 g</span></li>
+                <li><span class="carte__name">Bataty z marynowaną cebulką</span><span class="carte__price">29</span><span class="carte__desc">pieczony batat, marynowana cebulka, świeża kolendra, maldon · 200 g</span></li>
+                <li><span class="carte__name">Labneh z winogronami</span><span class="carte__price">28</span><span class="carte__desc">ser labneh własnej roboty, pieczone winogrona · 150 g</span></li>
+                <li><span class="carte__name">Kapusta pieczona w białym winie</span><span class="carte__price">34</span><span class="carte__desc">pieczona kapusta, czosnek, białe wino, masło z pieczonym czosnkiem i rozmarynem, parmezan · 180 g</span></li>
+                <li><span class="carte__name">Marchewka z różaną harissą</span><span class="carte__price">32</span><span class="carte__desc">pieczona marchewka, różana harissa, pietruszka, granat, miód, świeża kolendra, cytryna, maldon · 170 g</span></li>
+                <li><span class="carte__name">Kurczak z kiszoną cytryną</span><span class="carte__price">38</span><span class="carte__desc">pierś z kurczaka, kiszona cytryna, tymianek, tahini, salsa pietruszkowa, oliwa z Krety · 180 g</span></li>
+                <li><span class="carte__name">Soutzoukakia</span><span class="carte__price">42</span><span class="carte__desc">greckie klopsiki wołowo-wieprzowe zapiekane w sosie pomidorowym, mięta, cynamon, oliwa z Krety · 180 g</span></li>
+                <li><span class="carte__name">Pieczony bakłażan</span><span class="carte__price">33</span><span class="carte__desc">pieczony bakłażan, grecki jogurt, granat, tymianek, maldon · 170 g</span></li>
+                <li><span class="carte__name">Dynia z różaną harissą i tahini</span><span class="carte__price">33</span><span class="carte__desc">pieczona dynia, różana harissa, czosnek, tahini, sos sojowy, sok z limonki, świeża kolendra · 180 g</span></li>
+                <li><span class="carte__name">Palony bakłażan</span><span class="carte__price">30</span><span class="carte__desc">bakłażan, oliwa z Krety, salsa pietruszkowa, sumak, maldon · 200 g</span></li>
+                <li><span class="carte__name">Tabbouleh</span><span class="carte__price">32</span><span class="carte__desc">pietruszka, granat, bulgur, cytryna, oliwa, orzeszki piniowe, sumak · 150 g</span></li>
+                <li><span class="carte__name">Burrata</span><span class="carte__price">35</span><span class="carte__desc">burrata, cytrusy, prażone ziarna kolendry, miód, czosnek, oliwa · 180 g</span></li>
+                <li><span class="carte__name">Cebulki w miso</span><span class="carte__price">29</span><span class="carte__desc">cebulki, miso, masło · 120 g</span></li>
+              </ul>
+            </section>
+
+            <div>
+              <section class="carte__group" aria-labelledby="k-dodatki">
+                <h4 id="k-dodatki">Dodatki</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Koniecznie</span><span class="carte__price">28</span><span class="carte__desc">matbucha, tahini, pita · 290 g</span></li>
+                  <li><span class="carte__name">Matbucha</span><span class="carte__price">13</span><span class="carte__desc">salsa z pomidorów, chili, czosnek, oliwa · 100 g</span></li>
+                  <li><span class="carte__name">Tahini</span><span class="carte__price">12</span><span class="carte__desc">pasta tahini, cytryna, sumak · 50 g</span></li>
+                  <li><span class="carte__name">Pita</span><span class="carte__price">11</span><span class="carte__desc">puszysta gorąca pita · 140 g</span></li>
+                  <li><span class="carte__name">Oliwki + oliwa</span><span class="carte__price">16</span><span class="carte__desc">różne rodzaje oliwek, oregano, oliwa z Krety · 100 g</span></li>
+                  <li><span class="carte__name">Harissa</span><span class="carte__price">6</span><span class="carte__desc">pasta z harissy (ostra!) · 20 g</span></li>
+                  <li><span class="carte__name">Za’atar</span><span class="carte__price">6</span><span class="carte__desc">oliwa z Krety, za’atar · 20 g</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="k-slodkie">
+                <h4 id="k-slodkie">Słodki koniec</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Portokalopita</span><span class="carte__price">21</span><span class="carte__desc">ciasto filo, jogurt grecki, sok ze świeżych pomarańczy, skórka pomarańczowa, syrop cynamonowy · 200 g</span></li>
+                  <li><span class="carte__name">Malabi</span><span class="carte__price">21</span><span class="carte__desc">mleko, śmietanka, woda różana, pistacje, świeży granat · 150 g</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="k-napoje">
+                <h4 id="k-napoje">Napoje</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Coca-Cola</span><span class="carte__price">11</span><span class="carte__desc">butelka 0,25 l</span></li>
+                  <li><span class="carte__name">Woda</span><span class="carte__price">14</span><span class="carte__desc">butelka 0,7 l</span></li>
+                  <li><span class="carte__name">Sok ze świeżych pomarańczy</span><span class="carte__price">16</span><span class="carte__desc">szklanka 0,3 l</span></li>
+                  <li><span class="carte__name">Lemoniada</span><span class="carte__price">16</span><span class="carte__desc">cytrynowa z domowej roboty syropem kardamonowym, szklanka 0,3 l</span></li>
+                  <li><span class="carte__name">Napój jabłkowy Bevvy</span><span class="carte__price">17</span><span class="carte__desc">naturalna lemoniada jabłkowa gazowana 50/50, butelka 0,33 l</span></li>
+                  <li><span class="carte__name">Kawa po grecku</span><span class="carte__price">16</span><span class="carte__desc">grecka kawa parzona w tygielku na piasku</span></li>
+                  <li><span class="carte__name">Herbata turecka</span><span class="carte__price">16</span><span class="carte__desc">czarna turecka herbata ze świeżą miętą, szklanka 0,3 l</span></li>
+                  <li><span class="carte__name">Parzona mięta</span><span class="carte__price">14</span><span class="carte__desc">gorący napar ze świeżej mięty, szklanka 0,3 l</span></li>
+                  <li><span class="carte__name">Dodatki – herbata zimowa</span><span class="carte__price">7</span><span class="carte__desc">pomarańcza, cytryna, mięta, przyprawy korzenne</span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <h3 class="carte__title carte__title--drinks">Wina i <em>koktajle</em></h3>
+          <p class="carte__lead">Koktajle, wina naturalne i klasyczne oraz naturalne cydry, także opcje bezalkoholowe (**).</p>
+
+          <div class="carte__cols">
+            <div>
+              <section class="carte__group" aria-labelledby="k-wina-nat">
+                <h4 id="k-wina-nat">Wina naturalne</h4>
+                <p class="carte__unit">kieliszek 0,125 l | butelka 0,75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Love Birds</span><span class="carte__price">22 | 125</span><span class="carte__desc">białe, Słowenia – brzoskwinia, kwiaty, winogrona</span></li>
+                  <li><span class="carte__name">Modus Bibendi</span><span class="carte__price">28 | 168</span><span class="carte__desc">białe, Włochy – ananas, jabłko, rześkie</span></li>
+                  <li><span class="carte__name">Soulographie</span><span class="carte__price">31 | 178</span><span class="carte__desc">białe, Francja – mineralne, maślane, sezam</span></li>
+                  <li><span class="carte__name">Kerner</span><span class="carte__price">25 | 149</span><span class="carte__desc">pomarańczowe, Słowenia – pomelo, gruszka, Haribo</span></li>
+                  <li><span class="carte__name">Giandòn</span><span class="carte__price">29 | 172</span><span class="carte__desc">pomarańczowe, Włochy – brzoskwinia, herbata, kwiatowe</span></li>
+                  <li><span class="carte__name">Beck Ink</span><span class="carte__price">27 | 162</span><span class="carte__desc">czerwone, Austria – jeżyna, śliwka w czekoladzie</span></li>
+                  <li><span class="carte__name">Berzmèin</span><span class="carte__price">31 | 186</span><span class="carte__desc">czerwone, Włochy – czarna porzeczka, drewno, dym</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="k-wina-klas">
+                <h4 id="k-wina-klas">Wina klasyczne</h4>
+                <p class="carte__unit">kieliszek 0,125 l | butelka 0,75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Chardonnay</span><span class="carte__price">19 | 95</span><span class="carte__desc">białe, Włochy</span></li>
+                  <li><span class="carte__name">Susumaniello</span><span class="carte__price">20 | 115</span><span class="carte__desc">czerwone, Włochy</span></li>
+                  <li><span class="carte__name">Primitivo</span><span class="carte__price">21 | 125</span><span class="carte__desc">czerwone, Włochy</span></li>
+                  <li><span class="carte__name">Pinot Grigio 0%</span><span class="carte__price">19 | 95</span><span class="carte__desc">białe, Włochy, bezalkoholowe</span></li>
+                  <li><span class="carte__name">Prosecco Classic &amp; 0%</span><span class="carte__price">19 | 95</span><span class="carte__desc">musujące, Włochy</span></li>
+                  <li><span class="carte__name">Wino domowe białe / czerwone</span><span class="carte__price">17 | 49</span><span class="carte__desc">kieliszek 0,125 l | butelka 0,75 l</span></li>
+                </ul>
+              </section>
+            </div>
+
+            <div>
+              <section class="carte__group" aria-labelledby="k-koktajle">
+                <h4 id="k-koktajle">Koktajle</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Martini Ellenikos</span><span class="carte__price">29</span><span class="carte__desc">espresso martini na bazie greckiej kawy, wódka, kahlua</span></li>
+                  <li><span class="carte__name">Skhug Margarita</span><span class="carte__price">29</span><span class="carte__desc">tequila, sok z limonki, syrop kardamonowy, świeża kolendra, sumak</span></li>
+                  <li><span class="carte__name">Pomegranate Splash**</span><span class="carte__price">29</span><span class="carte__desc">wódka, prosecco, syrop z granatu, świeża mięta, świeży granat</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="k-cydry">
+                <h4 id="k-cydry">Cydry</h4>
+                <p class="carte__unit">kieliszek 0,125 l | butelka 0,75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Klasyczny</span><span class="carte__price">14 | 79</span><span class="carte__desc">Bevvy Podlaski – klasyczny cydr jabłkowy</span></li>
+                  <li><span class="carte__name">Wytrawny wiśniowy</span><span class="carte__price">14 | 79</span><span class="carte__desc">Bevvy Podlaski – wytrawny cydr z dodatkiem wiśni</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="k-piwa">
+                <h4 id="k-piwa">Piwa</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Miami Lager | Jungle IPA | Mango Jerry | Zero to Hero**</span><span class="carte__price">18</span><span class="carte__desc">Inne Beczki, butelka 0,5 l</span></li>
+                </ul>
+              </section>
+              <p class="carte__unit">** opcje bezalkoholowe</p>
+            </div>
+          </div>
+
+          <p class="carte__foot">Przy stolikach od sześciu osób doliczamy 10% opłaty operacyjnej. Nie ma możliwości dzielenia rachunku ani płatności.</p>
+        </div>
+        <p class="band__note">Karta zmienia się sezonowo.</p>
+      </div>
+
+      <!-- ENGLISH MENU – source: the English pages in the Instagram highlight "menu" (@sigasigawarsaw),
+           "menu autumn–winter 2026/2027" and "alko menu autumn–winter 2026/2027". Copied as published.
+           TODO: as in the Polish version, confirm the veggie labels with the kitchen. -->
+      <div class="menu-lang" data-lang="en" lang="en" hidden>
+        <ol class="polaroids">
+          <li class="polaroid">
+            <img src="img/labneh-z-winogronami.jpg" alt="Labneh with baked dark grapes on a porcelain plate" width="1200" height="675" loading="lazy">
+            <h3>Labneh with grapes</h3>
+            <p>Home made labneh cheese, baked grapes. 150 g</p>
+            <p class="polaroid__meta"><span class="tag tag--veg">veggie</span><span class="price">28 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/hummus-jaffa.jpg" alt="Hummus jaffa with caramelised onion and parsley salsa" width="1200" height="675" loading="lazy">
+            <h3>Hummus jaffa</h3>
+            <p>Chickpeas, tahini, lemon, olive oil, caramelised onion, spicy parsley salsa, sumak. 300 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">veggie? [DO UZUPEŁNIENIA]</span><span class="price">31 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/palony-baklazan.jpg" alt="Burned aubergine drizzled with olive oil, with parsley and sumac" width="1200" height="675" loading="lazy">
+            <h3>Burned aubergine</h3>
+            <p>Aubergine, olive oil from Crete, parsley salsa, sumak, maldon. 200 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">veggie? [DO UZUPEŁNIENIA]</span><span class="price">30 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/kalafior.jpg" alt="Baked cauliflower with green parsley salsa" width="1200" height="675" loading="lazy">
+            <h3>Cauliflower</h3>
+            <p>Baked cauliflower, parsley salsa, maldon. 700 g</p>
+            <p class="polaroid__meta"><span class="tag tag--unknown">veggie? [DO UZUPEŁNIENIA]</span><span class="price">45 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/marchewki-rozana-harissa.jpg" alt="Baked carrots with rose harissa, pomegranate and coriander" width="1200" height="675" loading="lazy">
+            <span class="sticker sticker--scallop" aria-hidden="true">rose<br>harissa</span>
+            <h3>Carrots with rose harissa</h3>
+            <p>Baked carrot, rose harissa, parsley, pomegranate, honey, fresh coriander, lemon, maldon. 170 g</p>
+            <p class="polaroid__meta"><span class="tag tag--veg">veggie</span><span class="price">32 zł</span></p>
+          </li>
+          <li class="polaroid">
+            <img src="img/kurczak-kiszona-cytryna.jpg" alt="Sliced chicken with pickled lemon, tahini and parsley salsa" width="1200" height="675" loading="lazy">
+            <h3>Chicken with pickled lemon</h3>
+            <p>Chicken breast, pickled lemon, thyme, tahini, parsley salsa, olive oil from Crete. 180 g</p>
+            <p class="polaroid__meta"><span class="price">38 zł</span></p>
+          </li>
+        </ol>
+
+        <div class="carte" id="karta-en">
+          <div class="checker checker--small" aria-hidden="true"></div>
+          <h3 class="carte__title">Full menu <em>autumn – winter 2026/27</em></h3>
+          <p class="carte__lead">Original cuisine inspired by Middle Eastern and Mediterranean flavors, in the form of mezze, appetizers, dips, and fluffy pita bread. Perfect for sharing with loved ones and trying new flavors. Prices in PLN.</p>
+
+          <div class="carte__cols">
+            <section class="carte__group" aria-labelledby="ke-mezze">
+              <h4 id="ke-mezze">Mezze / appetizers</h4>
+              <ul class="carte__list">
+                <li><span class="carte__name">Cauliflower</span><span class="carte__price">45</span><span class="carte__desc">baked cauliflower, parsley salsa, maldon · 700 g</span></li>
+                <li><span class="carte__name">Leek</span><span class="carte__price">29</span><span class="carte__desc">leek, parmesan, olive oil from Crete, maldon · 150 g</span></li>
+                <li><span class="carte__name">Padrón peppers</span><span class="carte__price">21</span><span class="carte__desc">padrón peppers, maldon · 100 g</span></li>
+                <li><span class="carte__name">Hummus jaffa</span><span class="carte__price">31</span><span class="carte__desc">chickpeas, tahini, lemon, olive oil, caramelised onion, spicy parsley salsa, sumak · 300 g</span></li>
+                <li><span class="carte__name">Baked sweet potatoes with pickled onions</span><span class="carte__price">29</span><span class="carte__desc">roasted sweet potatoes, pickled onion, fresh coriander, maldon · 200 g</span></li>
+                <li><span class="carte__name">Labneh with grapes</span><span class="carte__price">28</span><span class="carte__desc">home made labneh cheese, baked grapes · 150 g</span></li>
+                <li><span class="carte__name">Cabbage roasted in white wine</span><span class="carte__price">34</span><span class="carte__desc">roasted cabbage, garlic, white wine, butter with roasted garlic and rosemary, parmesan · 180 g</span></li>
+                <li><span class="carte__name">Carrots with rose harissa</span><span class="carte__price">32</span><span class="carte__desc">baked carrot, rose harissa, parsley, pomegranate, honey, fresh coriander, lemon, maldon · 170 g</span></li>
+                <li><span class="carte__name">Chicken with pickled lemon</span><span class="carte__price">38</span><span class="carte__desc">chicken breast, pickled lemon, thyme, tahini, parsley salsa, olive oil from Crete · 180 g</span></li>
+                <li><span class="carte__name">Soutzoukakia</span><span class="carte__price">42</span><span class="carte__desc">Greek beef and pork meatballs baked in tomato sauce, mint, cinnamon, olive oil from Crete · 180 g</span></li>
+                <li><span class="carte__name">Baked aubergine</span><span class="carte__price">33</span><span class="carte__desc">baked aubergine, greek yogurt, pomegranate, thyme, maldon · 170 g</span></li>
+                <li><span class="carte__name">Pumpkin with rose harissa and tahini</span><span class="carte__price">33</span><span class="carte__desc">roasted pumpkin, rose harissa, garlic, tahini, soya sauce, lime juice, fresh coriander · 180 g</span></li>
+                <li><span class="carte__name">Burned aubergine</span><span class="carte__price">30</span><span class="carte__desc">aubergine, olive oil from Crete, parsley salsa, sumak, maldon · 200 g</span></li>
+                <li><span class="carte__name">Tabbouleh</span><span class="carte__price">32</span><span class="carte__desc">parsley, pomegranate, bulgur, lemon, olive oil, pine nuts, sumak · 150 g</span></li>
+                <li><span class="carte__name">Burrata</span><span class="carte__price">35</span><span class="carte__desc">burrata, oranges, roasted coriander seeds, honey, garlic, olive oil · 180 g</span></li>
+                <li><span class="carte__name">Onions in miso</span><span class="carte__price">29</span><span class="carte__desc">onions, miso, butter · 120 g</span></li>
+              </ul>
+            </section>
+
+            <div>
+              <section class="carte__group" aria-labelledby="ke-extras">
+                <h4 id="ke-extras">Extras</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Must have</span><span class="carte__price">28</span><span class="carte__desc">matbucha, tahini, pita · 290 g</span></li>
+                  <li><span class="carte__name">Matbucha</span><span class="carte__price">13</span><span class="carte__desc">tomato salsa, chili, garlic, olive oil · 100 g</span></li>
+                  <li><span class="carte__name">Tahini</span><span class="carte__price">12</span><span class="carte__desc">tahini paste, lemon, sumac · 50 g</span></li>
+                  <li><span class="carte__name">Pita</span><span class="carte__price">11</span><span class="carte__desc">fluffy hot pita · 140 g</span></li>
+                  <li><span class="carte__name">Olives + olive oil</span><span class="carte__price">16</span><span class="carte__desc">various types of olives, oregano, olive oil from Crete · 100 g</span></li>
+                  <li><span class="carte__name">Harissa</span><span class="carte__price">6</span><span class="carte__desc">harissa paste (spicy!) · 20 g</span></li>
+                  <li><span class="carte__name">Za’atar</span><span class="carte__price">6</span><span class="carte__desc">olive oil from Crete, za’atar · 20 g</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="ke-sweet">
+                <h4 id="ke-sweet">Sweet end</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Portokalopita</span><span class="carte__price">21</span><span class="carte__desc">filo, greek yogurt, fresh orange juice, orange zest, cinnamon syrup · 200 g</span></li>
+                  <li><span class="carte__name">Malabi</span><span class="carte__price">21</span><span class="carte__desc">milk, cream, fresh pomegranate, rose water, pomegranate syrup, pistachios · 150 g</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="ke-drinks">
+                <h4 id="ke-drinks">Drinks</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Coca-Cola</span><span class="carte__price">11</span><span class="carte__desc">bottle 0.25 l</span></li>
+                  <li><span class="carte__name">Water</span><span class="carte__price">14</span><span class="carte__desc">bottle 0.7 l</span></li>
+                  <li><span class="carte__name">Freshly squeezed orange juice</span><span class="carte__price">16</span><span class="carte__desc">glass 0.3 l</span></li>
+                  <li><span class="carte__name">Lemonade</span><span class="carte__price">16</span><span class="carte__desc">lemon with homemade cardamom syrup, glass 0.3 l</span></li>
+                  <li><span class="carte__name">Bevvy apple drink</span><span class="carte__price">17</span><span class="carte__desc">natural sparkling apple lemonade 50/50, bottle 0.33 l</span></li>
+                  <li><span class="carte__name">Greek coffee</span><span class="carte__price">16</span><span class="carte__desc">greek coffee brewed in a pot on the sand</span></li>
+                  <li><span class="carte__name">Turkish tea</span><span class="carte__price">16</span><span class="carte__desc">black turkish tea with fresh mint, glass 0.3 l</span></li>
+                  <li><span class="carte__name">Fresh mint</span><span class="carte__price">14</span><span class="carte__desc">a hot infusion of fresh mint, 0.3 l glass</span></li>
+                  <li><span class="carte__name">Winter tea extras</span><span class="carte__price">7</span><span class="carte__desc">orange, lemon, mint, seasonal spices</span></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+
+          <h3 class="carte__title carte__title--drinks">Wine &amp; <em>cocktails</em></h3>
+          <p class="carte__lead">A selection of cocktails, natural and classic wines, and natural ciders – non-alcoholic options available (**).</p>
+
+          <div class="carte__cols">
+            <div>
+              <section class="carte__group" aria-labelledby="ke-natural">
+                <h4 id="ke-natural">Natural wines</h4>
+                <p class="carte__unit">glass 0.125 l | bottle 0.75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Love Birds</span><span class="carte__price">22 | 125</span><span class="carte__desc">White | Slovenia – peach, flowers, grapes</span></li>
+                  <li><span class="carte__name">Modus Bibendi</span><span class="carte__price">28 | 168</span><span class="carte__desc">White | Italy – pineapple, apple, crisp</span></li>
+                  <li><span class="carte__name">Soulographie</span><span class="carte__price">31 | 178</span><span class="carte__desc">White | France – mineral, buttery, sesame</span></li>
+                  <li><span class="carte__name">Kerner</span><span class="carte__price">25 | 149</span><span class="carte__desc">Orange | Slovenia – pomelo, pear, Haribo</span></li>
+                  <li><span class="carte__name">Giandòn</span><span class="carte__price">29 | 172</span><span class="carte__desc">Orange | Italy – peach, tea, floral</span></li>
+                  <li><span class="carte__name">Beck Ink</span><span class="carte__price">27 | 162</span><span class="carte__desc">Red | Austria – blackberry, plum in chocolate</span></li>
+                  <li><span class="carte__name">Berzmèin</span><span class="carte__price">31 | 186</span><span class="carte__desc">Red | Italy – blackcurrant, woody, smoky</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="ke-classic">
+                <h4 id="ke-classic">Classic wines</h4>
+                <p class="carte__unit">glass 0.125 l | bottle 0.75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Chardonnay</span><span class="carte__price">19 | 95</span><span class="carte__desc">White | Italy</span></li>
+                  <li><span class="carte__name">Susumaniello</span><span class="carte__price">20 | 115</span><span class="carte__desc">Red | Italy</span></li>
+                  <li><span class="carte__name">Primitivo</span><span class="carte__price">21 | 125</span><span class="carte__desc">Red | Italy</span></li>
+                  <li><span class="carte__name">Pinot Grigio 0%</span><span class="carte__price">19 | 95</span><span class="carte__desc">White | Italy</span></li>
+                  <li><span class="carte__name">Prosecco Classic &amp; 0%</span><span class="carte__price">19 | 95</span><span class="carte__desc">Bubbles | Italy</span></li>
+                  <li><span class="carte__name">House wine white / red</span><span class="carte__price">17 | 49</span><span class="carte__desc">glass 0.125 l | bottle 0.75 l</span></li>
+                </ul>
+              </section>
+            </div>
+
+            <div>
+              <section class="carte__group" aria-labelledby="ke-cocktails">
+                <h4 id="ke-cocktails">Cocktails</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Martini Ellenikos</span><span class="carte__price">29</span><span class="carte__desc">espresso martini made with Greek coffee, vodka, Kahlua</span></li>
+                  <li><span class="carte__name">Skhug Margarita</span><span class="carte__price">29</span><span class="carte__desc">tequila, lime juice, cardamom syrup, fresh cilantro, sumac</span></li>
+                  <li><span class="carte__name">Pomegranate Splash**</span><span class="carte__price">29</span><span class="carte__desc">vodka, prosecco, pomegranate syrup, fresh mint, fresh pomegranate</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="ke-ciders">
+                <h4 id="ke-ciders">Ciders</h4>
+                <p class="carte__unit">glass 0.125 l | bottle 0.75 l</p>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Classic</span><span class="carte__price">14 | 79</span><span class="carte__desc">Bevvy Podlaski – classic apple cider</span></li>
+                  <li><span class="carte__name">Dry cherry</span><span class="carte__price">14 | 79</span><span class="carte__desc">Bevvy Podlaski – dry cider with cherries</span></li>
+                </ul>
+              </section>
+
+              <section class="carte__group" aria-labelledby="ke-beers">
+                <h4 id="ke-beers">Beers</h4>
+                <ul class="carte__list">
+                  <li><span class="carte__name">Miami Lager | Jungle IPA | Mango Jerry | Zero to Hero**</span><span class="carte__price">18</span><span class="carte__desc">Inne Beczki, bottle 0.5 l</span></li>
+                </ul>
+              </section>
+              <p class="carte__unit">** non-alcoholic options</p>
+            </div>
+          </div>
+
+          <p class="carte__foot">For tables of six or more people, we add a ten per cent service charge and we are unable to split the bill or the payment.</p>
+        </div>
+        <p class="band__note">The menu changes with the seasons.</p>
+      </div>
+    </section>
+
+    <!-- 3. JAK U NAS JEST -->
+    <section class="house" id="jak-u-nas" aria-labelledby="house-title">
+      <div class="house__head">
+        <h2 id="house-title" class="display display--dark">
+          <span class="dotline">Jak u nas</span><br>jest
+          <span class="sticker sticker--oval sticker--terra" aria-hidden="true">powoli</span>
+        </h2>
+      </div>
+
+      <ol class="rules">
+        <li class="rule">
+          <span class="rule__num" aria-hidden="true">01</span>
+          <div>
+            <h3>Rysuj po obrusie</h3>
+            <p>Obrusy są papierowe i można po nich rysować. Niżej kilka rysunków naszych gości.</p>
+              </li>
+          <li class="rule">
+            <span class="rule__num" aria-hidden="true">02</span>
+            <div>
+              <h3>Talerze do dzielenia</h3>
+              <p>Wszystko podajemy na mniejszych talerzykach, do dzielenia się i wspólnego biesiadowania.</p>
+            </div>
+          </li>
+          <li class="rule">
+            <span class="rule__num" aria-hidden="true">03</span>
+            <div>
+              <h3>Na spokojnie</h3>
+              <p>Wszystko w klimacie siga siga, czyli na spokojnie, z osobistym podejściem gospodarza.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <h3 class="drawings__title">Przy naszych stołach</h3>
+      <!-- Zdjęcia: Instagram @sigasigawarsaw oraz zdjęcia gości z Google Maps – autorzy w img/ZRODLA.md.
+           TODO: potwierdzić z lokalem i autorami zgodę na użycie zdjęć na stronie. -->
+      <ul class="polaroids polaroids--light">
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/stol-wino.jpg" alt="Stolik z kilkoma małymi talerzami, pitą i butelką wina, w tle zieleń" width="1109" height="1400" loading="lazy">
+          <p class="polaroid__caption">Wino i małe talerze</p>
+        </li>
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/stol-swiece.jpg" alt="Długi stół wieczorem: świece, kwiaty, kieliszki i talerze" width="1400" height="1400" loading="lazy">
+          <span class="sticker sticker--diamond" aria-hidden="true"><span>na<br>spokojnie</span></span>
+          <p class="polaroid__caption">Wieczór przy świecach</p>
+        </li>
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/stol-papier.jpg" alt="Stół z papierowym obrusem spiętym klipsami: kalafior, pita, wino" width="1400" height="1400" loading="lazy">
+          <p class="polaroid__caption">Papierowy obrus</p>
+        </li>
+      </ul>
+
+      <h3 class="drawings__title">Z papierowych obrusów</h3>
+      <ul class="polaroids polaroids--light">
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/rysunek-szanuj-zielen.jpg" alt="Rysunek białym markerem na papierowym obrusie: ryba, oko, słońce i napis „Szanuj zieleń, kochaj pieski, zamiast wciągać rysuj kreski”" width="1400" height="1399" loading="lazy">
+          <p class="polaroid__caption">„Zamiast wciągać, rysuj kreski”</p>
+        </li>
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/rysunek-never.jpg" alt="Pieczony kalafior na stole, wokół na papierowym obrusie rysunki i napisy białym markerem" width="1400" height="1400" loading="lazy">
+          <p class="polaroid__caption">Rysunki między talerzami</p>
+        </li>
+        <li class="polaroid">
+          <img class="polaroid__photo" src="img/rysunek-kolacja.jpg" alt="Talerze z papryczkami i pastą, wino i kwiaty na stole, na papierze odręczne napisy i marker" width="1397" height="1400" loading="lazy">
+          <p class="polaroid__caption">Kolacja na papierze</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- OPINIE – prawdziwe opinie z Google Maps (wizytówka „Siga Siga Warsaw”), stan 22.11.2026.
+         Cytaty dosłowne; […] = pominięty fragment. Imię i pierwsza litera nazwiska autora.
+         TODO: ocena i liczba opinii zmieniają się – aktualizuj co jakiś czas. Rozważ zgodę autorów na cytowanie. -->
+    <section class="reviews" id="opinie" aria-labelledby="reviews-title">
+      <div class="reviews__head">
+        <h2 id="reviews-title" class="display display--dark">
+          <span class="dotline">Opinie</span><br>naszych gości
+        </h2>
+        <p class="reviews__score"><span class="reviews__num">4,7</span> <span class="reviews__of">/ 5</span><br>
+          <span class="reviews__count">229 opinii w Google</span></p>
+      </div>
+
+      <ul class="review-list">
+        <li class="review">
+          <blockquote>
+            <p>Bardzo klimatyczne miejsce z bardzo smacznym jedzeniem w normalnych cenach. Uwaga! Porcje są pokaźne. Kalafior przerósł nasze oczekiwania!!!</p>
+          </blockquote>
+          <p class="review__who">Magdalena Z. <span>· Google, paź 2026</span></p>
+        </li>
+        <li class="review">
+          <blockquote>
+            <p>Bardzo fajne miejsce, aktualnie w moim top 3 ulubionych sasiedzkich knajpek. Super ogródek — cicho, lampki, świeczki, kocyki, jest klimat. […] Obsługa bez nadęcia, można normalnie pogadać.</p>
+          </blockquote>
+          <p class="review__who">Kinga H. <span>· Google, paź 2026</span></p>
+        </li>
+        <li class="review">
+          <blockquote>
+            <p>No jest świetnie. […] Przemiła obsługa, fajny klimat i zaskakująco sensowne ceny. Polecam!</p>
+          </blockquote>
+          <p class="review__who">Piotr M. <span>· Google, lis 2026</span></p>
+        </li>
+      </ul>
+
+      <p class="reviews__more"><a class="link-arrow" href="https://www.google.com/maps/place/Siga+Siga+Warsaw/@52.207147,21.023612,17z/data=!4m8!3m7!1s0x471ecdb75b90b607:0x74a90d5db947584a!8m2!3d52.207147!4d21.023612!9m1!1b1" rel="noopener">Wszystkie opinie w Google <span aria-hidden="true">→</span></a></p>
+    </section>
+
+    <!-- 4–5. GODZINY + KONTAKT – jedna sekcja. W tle polaroidy dań z Instagrama lokalu (źródła: img/ZRODLA.md). -->
+    <section class="visit" id="godziny" aria-labelledby="hours-title">
+      <div class="visit__bg" aria-hidden="true">
+        <figure class="vp vp--1"><img src="img/polaroid-cebulki.jpg" alt="" width="900" height="1198" loading="lazy" decoding="async"></figure>
+        <figure class="vp vp--2"><img src="img/polaroid-dynia-harissa.jpg" alt="" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <figure class="vp vp--3"><img src="img/polaroid-burrata.jpg" alt="" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <figure class="vp vp--4"><img src="img/polaroid-fasolka.jpg" alt="" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <figure class="vp vp--5"><img src="img/polaroid-dynia-pieczona.jpg" alt="" width="900" height="1197" loading="lazy" decoding="async"></figure>
+      </div>
+
+      <div class="visit__grid">
+          <div class="ticket">
+            <div class="checker checker--small" aria-hidden="true"></div>
+            <p class="ticket__kicker">Siga Siga</p>
+            <h2 id="hours-title" class="ticket__title">Godziny <em>otwarcia</em></h2>
+            <p class="hours__status" id="hours-status" aria-live="polite"></p>
+            <!-- Źródło godzin: bio Instagrama lokalu („śr-cz 13-21 | pt-sb 13-22 | nd 13-20”) + Google Maps, stan 22.11.2026.
+                 Przy zmianie godzin zaktualizuj też obiekt HOURS w script.js i JSON-LD w <head>. -->
+            <table class="hours__table">
+              <caption class="visually-hidden">Godziny otwarcia Siga Siga</caption>
+              <tbody>
+                <tr data-day="1" class="is-closed"><th scope="row">Poniedziałek</th><td>zamknięte</td></tr>
+                <tr data-day="2" class="is-closed"><th scope="row">Wtorek</th><td>zamknięte</td></tr>
+                <tr data-day="3" class="is-open"><th scope="row">Środa</th><td>13:00 – 21:00</td></tr>
+                <tr data-day="4" class="is-open"><th scope="row">Czwartek</th><td>13:00 – 21:00</td></tr>
+                <tr data-day="5" class="is-open"><th scope="row">Piątek</th><td>13:00 – 22:00</td></tr>
+                <tr data-day="6" class="is-open"><th scope="row">Sobota</th><td>13:00 – 22:00</td></tr>
+                <tr data-day="0" class="is-open"><th scope="row">Niedziela</th><td>13:00 – 20:00</td></tr>
+              </tbody>
+            </table>
+            <div class="ticket__rows">
+              <p><span class="rule__num">01</span> Rezerwacje: <a href="tel:+48537880780">537 880 780</a></p>
+              <p><span class="rule__num">02</span> Pytania: <a href="mailto:sigasigabistro@gmail.com">sigasigabistro@gmail.com</a></p>
+            </div>
+            <span class="sticker sticker--oval sticker--terra ticket__sticker" aria-hidden="true">zapraszamy</span>
+          </div>
+
+        <div class="visit__contact" id="kontakt" aria-labelledby="contact-title" role="region">
+          <h2 id="contact-title" class="display display--dark"><span class="dotline">Willowa 9</span></h2>
+          <div class="contact__grid">
+            <address class="contact__info">
+              <dl>
+                <div><dt>Adres</dt><dd>ul. Willowa 9<br>00-790 Warszawa (Mokotów)</dd></div>
+                <div><dt>Telefon</dt><dd><a href="tel:+48537880780">537 880 780</a></dd></div>
+                <div><dt>E-mail</dt><dd><a href="mailto:sigasigabistro@gmail.com">sigasigabistro@gmail.com</a></dd></div>
+                <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/sigasigabistro/" rel="noopener">facebook.com/sigasigabistro</a></dd></div>
+              </dl>
+              <div class="contact__actions">
+                <a class="btn" href="tel:+48537880780">Zadzwoń i zarezerwuj</a>
+                <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Siga+Siga+Willowa+9+Warszawa" rel="noopener">Wyznacz trasę →</a>
+              </div>
+            </address>
+            <div class="contact__map frame">
+              <iframe
+                title="Mapa Google: Siga Siga, ul. Willowa 9, Warszawa"
+                src="https://www.google.com/maps?q=Siga+Siga,+Willowa+9,+00-790+Warszawa&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__name">Siga Siga</p>
+    <p>Bistro bliskowschodnie · ul. Willowa 9, 00-790 Warszawa</p>
+    <p class="site-footer__small">© <span id="year">2026</span> Siga Siga · Zdjęcia dań: Siga Siga (Wolt)</p>
+  </footer>
+  <div class="checker" aria-hidden="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
