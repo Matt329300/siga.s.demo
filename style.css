@@ -737,3 +737,12 @@ em { font-style: italic; }
   transform: rotate(-2deg);
 }
 .btn:hover { border-color: var(--terra-dark); }
+
+/* Telefon: napis „Bistro bliskowschodnie · …” na dole hero, półprzezroczysty */
+@media (max-width: 759px) {
+  .hero .eyebrow {
+    position: absolute; left: 1.25rem; right: 1.25rem; bottom: 1.6rem; margin: 0;
+    color: rgba(243, 217, 203, .62); font-size: .72rem; letter-spacing: .2em; line-height: 1.7;
+  }
+}
+.hero .eyebrow span { white-space: nowrap; }
